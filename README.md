@@ -21,7 +21,7 @@ Login to a live MSA as root and perform the following:
 	ln -s ../OpenMSA_Workflow_Kibana/ OpenMSA_Workflow_Kibana
 	
 	# Disable the automatic update to prevent unintended changes to workflows during local development.
-	mkdir -p /opt/fmc_repository/cloudclapp-wf/.devops 
+	mkdir -p /opt/fmc_repository/OpenMSA_Workflow_Kibana/.devops 
 
 
 The new entry "Deploy Dashboard" should be available and browsable under `Automation > Workflows`.
