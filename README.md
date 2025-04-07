@@ -1,29 +1,27 @@
-Workflows
+Kibana Deployment Workflow
 =========
 
-This repository provides the workflow used to deploy a Kibana dashboard on the MSactivator.
+This repository provides the workflow for deploying a Kibana dashboard on the MSactivator.
+
 Download them and then load them into the MSActivator repository.
 
-Alternatively, see below "Installing this repo on a live MSA".
+Alternatively, see below "Installing this repo on a local MSA".
 
 
-Getting started
----------------
+Installing this repo for local environment
+------------------------------------------
 
-The [wiki](https://github.com/openmsa/Workflows/wiki)
-provides a set of tutorials to help getting started with Workflow.
-
-
-Installing this repo on a live MSA
-----------------------------------
+The procedure below is for developer who are going to code changes on a MSActivator. The installation of the workflow for operational use can be done by running a container based installer
 
 Login to a live MSA as root and perform the following:
 
 	cd /opt/fmc_repository
-	git clone https://github.com/openmsa/Workflows_Kibana_Dashboard OpenMSA_WF_Kibana_Dashboard
-	chown -R ncuser. OpenMSA_WF_Kibana_Dashboard/
+	git clone https://github.com/openmsa/workflow_kibana.git OpenMSA_Workflow_Kibana
 	cd Process/
-	ln -s ../OpenMSA_WF_Kibana_Dashboard/ OpenMSA_WF_Kibana_Dashboard
+	ln -s ../OpenMSA_Workflow_Kibana/ OpenMSA_Workflow_Kibana
+	
+	# Disable the automatic update to prevent unintended changes to workflows during local development.
+	mkdir -p /opt/fmc_repository/cloudclapp-wf/.devops 
 
-The new entry "OpenMSA" should be available and browsable
-under `Automation > Workflows`.
+
+The new entry "Deploy Dashboard" should be available and browsable under `Automation > Workflows`.
